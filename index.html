@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Tree Story</title>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="bgContainer" class="p1Bg invis"></div>
+    <div id="startDialog" class="startDialog">
+        <div id="stars" class="stars"></div>
+        
+        <div id="cors-warning">
+            ⚠️ CORS is blocking some resources. Please use a local web server, like livepreview for a better experience and to view animations.
+        </div>
+        <div style="z-index: 2;" class="startText">
+            <p><br><br></p>
+            <h1 style="color: white;">Welcome to the Decision Tree Story</h1>
+                
+            <p id="story-text" style="color: white; font-size: 29px;">Embark on your journey by clicking the button below.</p>
+            <div id="choices" class="choices-container">
+                <button id="startButton" class="container" style="left: 50vw; top: 50vh; margin-left:-125px; margin-top:-50px; width: 250px; height: 100px; position: fixed;">Begin Adventure</button>
+            </div>
+        </div>
+    </div>
+    <div id="animation-container" class="animation-container" style="z-index: 3;"></div>
+    <div id="lowTaperFader" class="fadder" style="z-index: 4;"></div>
+    <div id="app" class="contentArea" style="z-index: 4;"></div>
+</body>
+</html>
