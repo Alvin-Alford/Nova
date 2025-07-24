@@ -339,7 +339,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // add stars
     addStars();
     // get and add startButton listener
-    testCORS('../animations/mirrormountain.html');
+    testCORS('animations/mirrormountain.html');
     const startButton = document.getElementById('startButton');
     startButton.addEventListener('click', async () => {
         // fade to white completely then remove start page html and unfade and start animation
