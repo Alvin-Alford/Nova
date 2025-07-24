@@ -91,7 +91,7 @@ const storyData = {
     },
     H: {
     text: "Nova reaches Mirror Mountain, tall and glimmering like starlight on water. She climbs, and the mountain reflects her memories: when she was afraid, when she helped others, when she kept going. At the top, the sky asks a question: “Do you believe you are still a star?” Nova's answer?",
-    image: "images/Daco_1953885 Background Removed.png",
+    image: "images/Mirror Mountain.png",
     options: [
         { text: "Yes—I always was", next: "I" },
         { text: "I'm not sure… I still feel small", next: "J" },
@@ -131,6 +131,7 @@ let corsProb = false
 
 // this function removes any animation classes from a item then adds an animation class with a duration
 function runAnimation(element, animationClass, duration) {
+    console.log(animationClass)
     // so it takes time we make a promise
     return new Promise((resolve) => {
         // remove any existing animation classes
@@ -161,11 +162,12 @@ function optionShowFun() {
 }
 
 // story choice hide function
-async function optionHideFun() {
+async function optionHideFun(callback) {
     // run hide animation but continue instantly
     runAnimation(storyContainer, 'animation-optionHide', 0.5);
     // fader 0.5 - 1 and wait 0.5 till next
     await runAnimation(fader, 'animation-f-l', 0.5);
+    callback();
     // then fade 1 - 0
     runAnimation(fader, 'animation-l-o', 0.7);
 }
@@ -234,7 +236,7 @@ function showStoryPart(storyPart) {
             <!-- the map function does applys some operation to each item in an array -->
             <!-- the operation that is applying is a string formating where it creates the buttons with the onclick of calling the loadStoryPart function -->
             ${storyPart.options.map(option => `
-                <button class="storyButtons" onclick="optionHideFun(); loadStoryPart('${option.next}');">${option.text}</button>
+                <button class="storyButtons" onclick="optionHideFun(() => loadStoryPart('${option.next}'));">${option.text}</button>
             `).join('')}
         </div>
         <!-- oneline if statement that if the question can have a random choice button adds it -->

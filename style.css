@@ -3,13 +3,11 @@
     src: url("fonts/PatrickHand-Regular.ttf");
 }
 
-/* twinkle animation for sky */
 @keyframes twinkle {
     from { opacity: 0.5; transform: scale(0.8); }
     to { opacity: 1; transform: scale(1.2); }
 }
 
-/* the animations named like o-l represent 0% opacity to 100%  */
 @keyframes o-l {
     0% { opacity: 0; }
     100% { opacity: 1; }
@@ -20,7 +18,16 @@
     100% { opacity: 0; }
 }
 
-/* o-f is 0% opacity to 100% but with background fade and blur etc. */
+@keyframes optionShow {
+    0% { opacity: 0; }
+    100% { opacity: 1; top: 50%; transform: translate(0, -50%); }
+}
+
+@keyframes optionHide {
+    0% { opacity: 1; top: 50%; transform: translate(0, -50%); }
+    100% { opacity: 0; top: 100%; }
+}
+
 @keyframes o-f {
     0% { 
         background-color: rgba(0, 0, 0, 0.7);
@@ -55,19 +62,19 @@
     100% { opacity: 0.3; }
 }
 
-/* these animations are for the question box that hides and shows itself */
-@keyframes optionShow {
-    0% { opacity: 0; }
-    100% { opacity: 1; top: 50%; transform: translate(0, -50%); }
+
+.animation-smallShake {
+    animation: smallShake 0.2s ease-in-out forwards;
 }
 
-@keyframes optionHide {
-    0% { opacity: 1; top: 50%; transform: translate(0, -50%); }
-    100% { opacity: 0; top: 100%; }
+.animation-normalShake {
+    animation: normalShake 0.2s ease-in-out forwards;
 }
 
+.animation-bigShake {
+    animation: bigShake 0.2s ease-in-out forwards;
+}
 
-/* below are the animation classes so that they can be applyied to document elements by js */
 .animation-o-l {
     opacity: 1;
     backdrop-filter: blur(10.6px);
