@@ -1,0 +1,220 @@
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(ellipse at center, #0a0a23, #000010 90%);
+      font-family: 'Georgia', serif;
+      overflow: hidden;
+      color: white;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+      50% { transform: translate(-50%, -50%) translateY(-20px); }
+    }
+
+    .story-container {
+      position: absolute;
+      z-index: 3;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem;
+      color: #f0f0f0;
+    }
+
+    .story-line {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+    }
+
+    .story-line.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .p1Bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/p1Bg.jpg");
+        background-color: #cccccc;
+        background-size: cover;
+        height: 105vh;
+        width: 105vw;
+        z-index: 0;
+        position: absolute;
+    }
+
+    .p1Bg.active-shake {
+      animation: screenShake 1s ease-in-out;
+    }
+
+
+    @keyframes lightningFlash {
+      0%, 100% {
+        opacity: 0;
+      }
+      2% {
+        opacity: 1;
+      }
+      4% {
+        opacity: 0;
+      }
+      7% {
+        opacity: 1;
+      }
+      8% {
+        opacity: 0;
+      }
+      15% {
+        opacity: 1;
+      }
+      16% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes screenShake {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      2% {
+        transform: translate(-5px, 2px);
+      }
+      4% {
+        transform: translate(4px, -3px);
+      }
+      7% {
+        transform: translate(-6px, 4px);
+      }
+      8% {
+        transform: translate(3px, -2px);
+      }
+      15% {
+        transform: translate(-4px, 5px);
+      }
+      16% {
+        transform: translate(0, 0);
+      }
+    }
+
+
+    .lightning-flash {
+      animation: lightning-flash 3s ease-out forwards;
+    }
+
+    .lightningFrame {
+        background-image: url("../images/lightningFrame.png");
+        background-color: rgba(255, 255, 255, 0.1);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+        position: absolute;
+        box-shadow: inset 0 0 200px 10px rgba(255, 255, 255, 1);
+        opacity: 0;
+        animation: lightning-flash 3s ease-out forwards;
+    }
+
+    .lighting-effect {
+      background-image: url("../images/lightningFrame.png");
+      background-color: rgba(255, 255, 255, 0.1);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      box-shadow: inset 0 0 200px 10px rgba(255, 255, 255, 1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .lighting-effect.active {
+      animation: lightningFlash 2s ease-in-out;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="lighting-effect"></div>
+  <div id="p1Bg" class="p1Bg">
+    <div class="story-container">
+      <div class="story-line" id="line1">
+        One night, a cosmic storm roared through the sky...
+      </div>
+      <div class="story-line" id="line2">
+        Nova, a small and curious star, was blown far from her home.
+      </div>
+      <div class="story-line" id="line3">
+        She tumbled through the dark and landed in the Forest of Echoes...
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    // fade-in animation
+    let toggle = true
+    const lines = [document.getElementById('line1'), document.getElementById('line2'), document.getElementById('line3')];
+    // const lightningFrame = document.getElementById('lightningFrame');
+
+    const lightning = document.querySelector('.lighting-effect');
+    const screen = document.getElementById('p1Bg');
+    // const thunder = document.getElementById('thunder-sound');
+
+    function triggerStorm() {
+      // Trigger flash and shake
+      lightning.classList.add('active');
+      screen.classList.add('active-shake');
+
+      // Delay thunder for realism (300ms–1000ms)
+      // setTimeout(() => {
+      //   thunder.currentTime = 0;
+      //   thunder.play();
+      // }, Math.random() * 700 + 300);
+
+      // Remove flash and shake after animation
+      setTimeout(() => {
+        if (toggle) {
+          lightning.classList.remove('active');
+          screen.classList.remove('active-shake');
+        }
+      }, 1000);
+    }
+
+    // loop storm every 4–10 seconds randomly
+    function startStormLoop() {
+      const nextStorm = Math.random() * 2000 + 1000;
+      setTimeout(() => {
+        startStormLoop(); 
+        triggerStorm();
+      }, nextStorm);
+    }
+
+    startStormLoop()
+
+    setTimeout(() => {
+      toggle = false
+    }, 7000)
+    lines.forEach((line, index) => {
+      setTimeout(() => {
+        line.classList.add('show');
+      }, (index + 1) * 1700); // delay between lines
+    });
+
+  </script>
+</body>

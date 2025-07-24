@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    .scene {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 1;
+      background: linear-gradient(to top, #000011, #2a2a72);
+    }
+
+    .mountain {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      justify-content: center;
+      width: 990px;
+      height: 226px;
+      bottom: -0.5%;
+      left: 50%;
+      transform: translate(-50% , 0%);
+      opacity: 0.7;
+      z-index: 2;
+      background-image: url("../images/Daco_1953885 Background Removed.png");
+      background-repeat: no-repeat;
+      filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white);
+    }
+
+    .text {
+      position: relative;
+      top: 0%;  
+      width: 110%;
+      margin: 10;
+      border-right: 2px solid rgba(255,255,255,.75);
+      font-size: 180%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);   
+      z-index: 3;
+    }
+
+    .anim-typewriter{
+      animation: typewriter 4s steps(50) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+    }
+
+    @keyframes typewriter{
+      from{width: 0;}
+      to{width: 33.5em;}
+    }
+
+    @keyframes blinkTextCursor{
+      from{border-right-color: rgba(255,255,255,.75);}
+      to{border-right-color: transparent;}
+    }
+
+    .memories {
+      opacity: 0;
+      transition: opacity 2s;
+      margin-top: 2em;
+      font-style: italic;
+      z-index: 4;
+    }
+
+    .question {
+      margin-top: 2em;
+      font-size: 2em;
+      opacity: 0;
+      transition: opacity 3s;
+      z-index: 5;
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="mountain"></div>
+    <div class="text anim-typewriter" id="intro">
+      Nova reaches Mirror Mountain, tall and glimmering like starlight on water.
+    </div>
+    <div class="memories" id="memories">
+      She climbs, and the mountain reflects her memories:
+      - when she was afraid,
+      - when she helped others,
+      - when she kept going.
+    </div>
+    <div class="question" id="question">
+      “Do you believe you are still a star?”
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('memories').style.opacity = 1;
+    }, 6500);
+
+    setTimeout(() => {
+      document.getElementById('question').style.opacity = 1;
+    }, 8000);
+  </script>
+</body>
+</html>
