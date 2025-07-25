@@ -1,8 +1,10 @@
+/* main font */
 @font-face {
     font-family: MainFont;
     src: url("fonts/PatrickHand-Regular.ttf");
 }
 
+/* animations */
 @keyframes twinkle {
     from { opacity: 0.5; transform: scale(0.8); }
     to { opacity: 1; transform: scale(1.2); }
@@ -62,7 +64,7 @@
     100% { opacity: 0.3; }
 }
 
-
+/* animation classes so that they can be applied with js easily */
 .animation-smallShake {
     animation: smallShake 0.2s ease-in-out forwards;
 }
@@ -114,6 +116,7 @@
     animation: optionHide 1s ease-in forwards;
 }
 
+/* css variables */
 :root {
     --main-color: blue;
     --secondary-color: purple;
@@ -148,6 +151,7 @@ html, body {
     z-index: 1;
 }
 
+/* background stars container */
 .stars {
     width: 100vw;
     height: 100vh;
@@ -161,6 +165,7 @@ html, body {
     z-index: 0;
 }
 
+/* background star div */
 .star {
     position: absolute;
     background: white;
@@ -216,6 +221,7 @@ p {
     border-width: 0;
 }
 
+/* basic background */
 .p1Bg {
     background-image: url("images/p1Bg.jpg");
     background-color: #cccccc;
@@ -228,6 +234,7 @@ p {
     position: absolute;
 }
 
+/* place holder background for future */
 .storyPageBackground {
     background-image: url("images/placeholder.jpg");
     background-color: #cccccc;
@@ -240,10 +247,12 @@ p {
     position: absolute;
 }
 
+/* a class for invisable elements */
 .invis {
     opacity: 0;
 }
 
+/* this needs a better name */
 .container {
     max-width: 600px;
     margin: 40px auto;

@@ -195,6 +195,7 @@ async function optionHideFun(callback) {
     runAnimation(storyContainer, 'animation-optionHide', 0.5);
     // fader 0.5 - 1 and wait 0.5 till next
     await runAnimation(fader, 'animation-f-l', 0.5);
+    // load story
     callback();
     // then fade 1 - 0
     runAnimation(fader, 'animation-l-o', 0.7);
