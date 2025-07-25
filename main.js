@@ -127,7 +127,8 @@ const storyContainer = document.getElementById("app");
 const animationContainer = document.getElementById("animation-container");
 const bgContainer = document.getElementById("bgContainer");
 const fader = document.getElementById("lowTaperFader");
-let corsProb = false
+const storyBackground = document.getElementById("storyBackground");
+let corsProb = false;
 
 // this function removes any animation classes from a item then adds an animation class with a duration
 function runAnimation(element, animationClass, duration) {
@@ -227,6 +228,11 @@ function loadAnimation(animationFile, animationLen ,callback) {
 // this function is the main function that loads the story / plays it
 function showStoryPart(storyPart) {
     // setting the html within the storyContainer element to the story decision
+    // if (storyPart.backgroundImage) {
+    //     storyBackground.style.backgroundImage = url(storyPart.backgroundImage)
+    // } else {
+    //     storyBackground.style.backgroundImage = url("images/bgPlaceholder.png")
+    // }
     storyContainer.innerHTML = `
         ${storyPart.image ? `<img src="${storyPart.image}" height="300">` : '<!-- no image -->'}
         <p id="story-text" style="color: white; font-size: 1.4em; padding: 3px; margin: 10px;">${storyPart.text}</p>

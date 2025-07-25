@@ -217,6 +217,18 @@ p {
     position: absolute;
 }
 
+.storyPageBackground {
+    background-image: url("images/placeholder.jpg");
+    background-color: #cccccc;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    position: absolute;
+}
+
 .invis {
     opacity: 0;
 }
