@@ -347,16 +347,22 @@ function addStars() {
     }
 }
 
+// a function to test the cors policy
 function testCORS(url) {
+    // fetch a test page
     fetch(url, { method: 'GET', mode: 'cors' })
         .then(response => {
             if (!response.ok) {
+                // if failed print error
                 console.warn(`Response error (status ${response.status})`);
             }
+            // do nothing if successful
         })
         .catch(error => {
+            // if fetch fail
             console.error('CORS or network error:', error);
             corsProb = true
+            // show the warning
             showWarning();
         });
 }
