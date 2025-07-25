@@ -12,6 +12,33 @@
 // #########################################################################################################################
 
 // array / js object that stores the story with animations and other stuff
+
+// const templateStoryData = {
+//     start: {
+//         text: "Nova falls from the sky during a wild cosmic storm. She crashes gently into a strange place—the Forest of Echoes, where every sound whispers back twice.",
+//         image: "images/Nova.png",
+//         options: [
+//             { text: "Call for help", next: "A" },
+//             { text: "Hide under the leaves", next: "B" }
+//         ],
+//         animation: { filePath:"animations/start.html", length:"8000" },
+//         random: true
+//     },
+//     A: {
+//         text: "Nova's echo reaches a wise old owl perched in a twisted silver tree. The owl hoots softly. “Follow the glow of the fireflies to the Dreaming River,” he says. “Then seek Mirror Mountain to return to the sky.”",
+//         image: NaN,
+//         options: [
+//             { text: "Follow the fireflies", next: "C" },
+//             { text: "Ask more questions", next: "D" },
+//         ],
+//         animation: NaN,
+//         random: true
+//     },
+//     homepage: {
+//         animation: { filePath:"animations/gotohome.html", length:"1000" }
+//     }
+// }
+
 const storyData = {
     start: {
         text: "Nova falls from the sky during a wild cosmic storm. She crashes gently into a strange place—the Forest of Echoes, where every sound whispers back twice.",

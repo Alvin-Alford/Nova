@@ -8,25 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- a container for backgrounds -->
     <div id="bgContainer" class="p1Bg invis"></div>
+    <!-- the start page dialog -->
     <div id="startDialog" class="startDialog">
         <div id="stars" class="stars"></div>
-        
+        <!-- warning for user if cors policy is blocking content loading -->
         <div id="cors-warning">
             ⚠️ CORS is blocking some resources. Please use a local web server, like livepreview for a better experience and to view animations.
         </div>
+        <!-- start text -->
         <div style="z-index: 2;" class="startText">
             <p><br><br></p>
+            <!-- Title -->
             <h1 style="color: white;">Nova</h1>
-                
+            <!-- Subtitle -->
             <p id="story-text" style="color: white; font-size: 29px;">Embark on your journey by clicking the button below.</p>
+            <!-- container containing start button -->
             <div id="choices" class="choices-container">
+                <!-- the button ..... wahht -->
                 <button id="startButton" class="container" style="left: 50vw; top: 50vh; margin-left:-125px; margin-top:-50px; width: 250px; height: 100px; position: fixed;">Begin Adventure</button>
             </div>
         </div>
     </div>
+    <!-- a container for the animation thinngs -->
     <div id="animation-container" class="animation-container" style="z-index: 3;"></div>
+    <!-- the page fader -->
     <div id="lowTaperFader" class="fadder" style="z-index: 4;"></div>
+    <!-- the container that holds the story app content -->
     <div id="app" class="contentArea" style="z-index: 4;"></div>
 </body>
 </html>
