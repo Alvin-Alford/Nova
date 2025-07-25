@@ -274,18 +274,20 @@ p {
     transition: all 0.3s ease-in-out;
 }
 
+/* again better name */
 .container:hover {
     background-size: 100%;
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 18px 30px rgba(0, 0, 0, 0.35);
 }
 
+/* again again again */
 .container:active {
     transform: translateY(0);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
-
+/* holy moly same i need to think of better name */
 #choices-container {
     display: flex;
     flex-direction: row;
