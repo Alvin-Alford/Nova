@@ -252,8 +252,8 @@ p {
     opacity: 0;
 }
 
-/* this needs a better name */
-.container {
+/* start button class  */
+.startButton {
     max-width: 600px;
     margin: 40px auto;
     padding: 30px;
@@ -274,15 +274,15 @@ p {
     transition: all 0.3s ease-in-out;
 }
 
-/* again better name */
-.container:hover {
+/* startbutton on hover */
+.startButton:hover {
     background-size: 100%;
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 18px 30px rgba(0, 0, 0, 0.35);
 }
 
-/* again again again */
-.container:active {
+/* start button when active */
+.startButton:active {
     transform: translateY(0);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
