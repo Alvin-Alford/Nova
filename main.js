@@ -270,7 +270,7 @@ function showStoryPart(storyPart) {
             <!-- the map function does applys some operation to each item in an array -->
             <!-- the operation that is applying is a string formating where it creates the buttons with the onclick of calling the loadStoryPart function -->
             ${storyPart.options.map(option => `
-                <button class="storyButtons" onclick="optionHideFun(() => loadStoryPart('${option.next}'));">${option.text}</button>
+                <button class="storyButtons" onclick="loadStoryPart('${option.next}');">${option.text}</button>
             `).join('')}
         </div>
         <!-- oneline if statement that if the question can have a random choice button adds it -->
@@ -309,7 +309,7 @@ function loadStoryPart(part) {
         // if their is an animation
         // () => showStoryPart(storyPart) is a callback that is provided to the loadAnimation 
         // function so that after the animation is loaded the story will show
-        loadAnimation(storyPart.animation.filePath, storyPart.animation.length, () => showStoryPart(storyPart));
+        optionHideFun(() => loadAnimation(storyPart.animation.filePath, storyPart.animation.length, () => showStoryPart(storyPart)));
     } else {
         // else just show story decision / text
         showStoryPart(storyPart);
