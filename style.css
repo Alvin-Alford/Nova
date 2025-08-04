@@ -5,31 +5,39 @@
 }
 
 /* animations */
+/* ######################################################################################################## */
+
+/* star twinkle animation */
 @keyframes twinkle {
     from { opacity: 0.5; transform: scale(0.8); }
     to { opacity: 1; transform: scale(1.2); }
 }
 
+/* 0% - 10% animation */
 @keyframes o-l {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
+/* 100% - 0% animation */
 @keyframes l-o {
     0% { opacity: 1; }
     100% { opacity: 0; }
 }
 
+/* choices show animation */
 @keyframes optionShow {
     0% { opacity: 0; }
     100% { opacity: 1; top: 50%; transform: translate(0, -50%); }
 }
 
+/* choices hide animation */
 @keyframes optionHide {
     0% { opacity: 1; top: 50%; transform: translate(0, -50%); }
     100% { opacity: 0; top: 100%; }
 }
 
+/* 0% - 50% animation */
 @keyframes o-f {
     0% { 
         background-color: rgba(0, 0, 0, 0.7);
@@ -41,11 +49,13 @@
     }
 }
 
+/* 50% - 0% animation */
 @keyframes f-o {
     0% { opacity: 0.3; }
     100% { opacity: 0; }
 }
 
+/* 50% - 100% animation */
 @keyframes f-l {
     0% { 
         opacity: 1;
@@ -59,62 +69,78 @@
     }
 }
 
+/* 100% - 50% animation */
 @keyframes l-f {
     0% { opacity: 1; }
     100% { opacity: 0.3; }
 }
 
 /* animation classes so that they can be applied with js easily */
+/* ######################################################################################################## */
+
+/* small shake animation class */
 .animation-smallShake {
     animation: smallShake 0.2s ease-in-out forwards;
 }
 
+/* normal shake animation class */
 .animation-normalShake {
     animation: normalShake 0.2s ease-in-out forwards;
 }
 
+/* big shake animation class */
 .animation-bigShake {
     animation: bigShake 0.2s ease-in-out forwards;
 }
 
+/* fader 0% - 100% animation class */
 .animation-o-l {
     opacity: 1;
     backdrop-filter: blur(10.6px);
     animation: o-l 1s ease-out forwards;
 }
 
+/* fader 100% - 0% animation class */
 .animation-l-o {
     opacity: 0;
     animation: l-o 1s ease-out forwards;
 }
 
+/* fader 0% - 100% animation class */
 .animation-o-f {
     opacity: 1;
     animation: o-f 0.2s ease-out forwards;
 }
 
+/* fader 50% - 0% animation class */
 .animation-f-o {
     opacity: 0;
     animation: f-o 1s ease-in forwards;
 }
 
+/* fader 50% - 100% animation class */
 .animation-f-l {
     opacity: 1;
     animation: f-l 0.2s ease-out forwards;
 }
 
+/* fader 100% - 50% animation class */
 .animation-l-f {
     opacity: 0.3;
     animation: l-f 0.2s ease-out forwards;
 }
 
+/* choices show animation class */
 .animation-optionShow {
     animation: optionShow 1s ease-out forwards;
 }
 
+/* choices hide animation class */
 .animation-optionHide {
     animation: optionHide 1s ease-in forwards;
 }
+
+/* ######################################################################################################## */
 
 /* css variables */
 :root {
@@ -128,11 +154,13 @@
     --text-color: white;
 }
 
+/* root formating */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* page formatin */
 html, body {
     display: flex;
     overflow: visible;
@@ -143,6 +171,7 @@ html, body {
     justify-content: center;
 }
 
+/* stars container */
 .star-content {
     display: flex;
     position: fixed;
@@ -175,10 +204,12 @@ html, body {
     z-index: 1;
 }
 
+/* this is useless */
 .startDialog {
     display: flex;
 }
 
+/* the homepage text */
 .startText {
     display: flex;
     align-items: center;
@@ -186,6 +217,7 @@ html, body {
     flex-direction: column;
 }
 
+/* main content formating even tho its never referenced */
 main {
     z-index: 100;
     align-items: center;
@@ -196,23 +228,27 @@ main {
     font-weight: 100;
 }
 
+/* header 1 looks */
 h1 {
     font-family: var(--main-font);
     font-weight: 100;
     font-size: 60px;
 }
 
+/* header 2 looks */
 h2 {
     font-family: var(--main-font);
     font-weight: 50;
 }
 
+/* paragraph looks */
 p {
     font-family: var(--main-font);
     font-weight: 50;
     text-align: center;
 }
 
+/* the story area */
 .storyArea {
     font-family: var(--main-font);
     font-weight: 100;
@@ -234,7 +270,7 @@ p {
     position: absolute;
 }
 
-/* place holder background for future */
+/* a place holder class for the background image of a story choice */
 .storyPageBackground {
     background-image: url("images/placeholder.jpg");
     background-color: #cccccc;
@@ -272,6 +308,13 @@ p {
     font-size: 22px;
     color: #ffffff;
     transition: all 0.3s ease-in-out;
+    left: 50vw; 
+    top: 50vh; 
+    margin-left:-125px; 
+    margin-top:-50px; 
+    width: 250px; 
+    height: 100px; 
+    position: fixed;
 }
 
 /* startbutton on hover */
@@ -287,7 +330,7 @@ p {
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
-/* holy moly same i need to think of better name */
+/* the container with all the choice buttons */
 #choices-container {
     display: flex;
     flex-direction: row;
@@ -296,6 +339,7 @@ p {
     margin: 10px;
 }
 
+/* the story choice button looks */
 .storyButtons {
     border-radius: 16px;
     background: linear-gradient(135deg, rgba(52, 52, 122, 0.6), rgba(133, 133, 133, 0.4));
@@ -319,27 +363,20 @@ p {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* the story choice button looks when hovered on */
 .storyButtons:hover {
     background-position: right center;
     transform: translateY(-4px) scale(1.02);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* the story choice button looks when active */
 .storyButtons:active {
     transform: translateY(0) scale(0.98);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.whiteCover {
-    background-color: white; 
-    opacity: 0; 
-    height: 100vh; 
-    width: 100vw;
-    z-index: 1000;
-    position: absolute;
-    pointer-events: none; 
-}
-
+/* the div container for the animations */
 .animation-container {
     height: 100vh; 
     width: 100vw;
@@ -385,6 +422,21 @@ p {
 #cors-warning {
     position: fixed;
     top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ff4d4d;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    display: none;
+    z-index: 9999;
+}
+
+#audio-warning {
+    position: fixed;
+    top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: #ff4d4d;

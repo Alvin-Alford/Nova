@@ -1,13 +1,8 @@
-//     _   _     _          _   _  __            _      _ ___ 
-//    /_\ | |_ _(_)_ _     /_\ | |/ _|___ _ _ __| |  _ | / __|
-//   / _ \| \ V / | ' \   / _ \| |  _/ _ \ '_/ _` | | || \__ \
-//  /_/ \_\_|\_/|_|_||_| /_/ \_\_|_| \___/_| \__,_|  \__/|___/
-//                                                           
 // #########################################################################################################################
 //    ___ ___  ___  ___ 
 //   / __/ _ \|   \| __|
 //  | (_| (_) | |) | _| 
-//   \___\___/|___/|___|
+//   \___\___/|___/|___| * * *  what        
 //                    
 // #########################################################################################################################
 
@@ -51,98 +46,98 @@ const storyData = {
         random: true
     },
     A: {
-    text: "Nova's echo reaches a wise old owl perched in a twisted silver tree. The owl hoots softly. “Follow the glow of the fireflies to the Dreaming River,” he says. “Then seek Mirror Mountain to return to the sky.”",
-    image: NaN,
-    options: [
-        { text: "Follow the fireflies", next: "C" },
-        { text: "Ask more questions", next: "D" },
-    ],
-    animation: NaN,
-    random: true
+        text: "Nova's echo reaches a wise old owl perched in a twisted silver tree. The owl hoots softly. “Follow the glow of the fireflies to the Dreaming River,” he says. “Then seek Mirror Mountain to return to the sky.”",
+        image: NaN,
+        options: [
+            { text: "Follow the fireflies", next: "C" },
+            { text: "Ask more questions", next: "D" },
+        ],
+        animation: NaN,
+        random: true
     },
     B: {
-    text: "Nova hides under fallen leaves. The forest grows colder, darker. She trembles. Suddenly, a soft hoot breaks the silence—the wise owl. “You don't belong here, little one,” he says. “You must find the Dreaming River, then climb Mirror Mountain.”",
-    image: NaN,
-    options: [
-        { text: "Thank the owl and follow his advice", next: "C" },
-        { text: "Refuse help and wander on her own", next: "E" },
-    ],
-    animation: NaN,
-    random: true
+        text: "Nova hides under fallen leaves. The forest grows colder, darker. She trembles. Suddenly, a soft hoot breaks the silence—the wise owl. “You don't belong here, little one,” he says. “You must find the Dreaming River, then climb Mirror Mountain.”",
+        image: NaN,
+        options: [
+            { text: "Thank the owl and follow his advice", next: "C" },
+            { text: "Refuse help and wander on her own", next: "E" },
+        ],
+        animation: NaN,
+        random: true
     },
     C: {
-    text: "Nova follows the fireflies to the glowing Dreaming River, which whispers songs of stars and dreams. To cross it, she must choose:",
-    image: NaN,
-    options: [
-        { text: "Ride a moon lily", next: "F" },
-        { text: "Leap across stepping stones of light", next: "G" },
-    ],
-    animation: NaN,
-    random: true
+        text: "Nova follows the fireflies to the glowing Dreaming River, which whispers songs of stars and dreams. To cross it, she must choose:",
+        image: NaN,
+        options: [
+            { text: "Ride a moon lily", next: "F" },
+            { text: "Leap across stepping stones of light", next: "G" },
+        ],
+        animation: NaN,
+        random: true
     },
     D: {
-    text: "Nova asks the owl, “Why Mirror Mountain?” “It reflects your true self,” he replies. “Only those who believe in their light can return to the sky.”",
-    image: NaN,
-    options: [
-        { text: "She nods and begins her journey", next: "C" },
-    ],
-    animation: NaN,
-    random: false
+        text: "Nova asks the owl, “Why Mirror Mountain?” “It reflects your true self,” he replies. “Only those who believe in their light can return to the sky.”",
+        image: NaN,
+        options: [
+            { text: "She nods and begins her journey", next: "C" },
+        ],
+        animation: NaN,
+        random: false
     },
     E: {
-    text: "Nova refuses help and wanders deeper into the Forest of Echoes. The trees twist. The sky vanishes. The whispers grow darker, turning into mocking voices. She loses track of time… and of herself. Eventually, she curls up and stops glowing. To change this fate, go back and accept the owl's help.",
-    image: NaN,
-    options: [
-        { text: "Go to homepage", next: "homepage" }
-    ],
-    animation: NaN,
-    random: false
+        text: "Nova refuses help and wanders deeper into the Forest of Echoes. The trees twist. The sky vanishes. The whispers grow darker, turning into mocking voices. She loses track of time… and of herself. Eventually, she curls up and stops glowing. To change this fate, go back and accept the owl's help.",
+        image: NaN,
+        options: [
+            { text: "Go to homepage", next: "homepage" }
+        ],
+        animation: NaN,
+        random: false
     },
     F: {
-    text: "Nova climbs onto a glowing moon lily, which floats gently across the Dreaming River. On the far bank, she sees the shimmering outline of Mirror Mountain.",
-    image: NaN,
-    options: [
-        { text: "Go to mirror mountain", next: "H" },
-    ],
-    animation: NaN,
-    random: false
+        text: "Nova climbs onto a glowing moon lily, which floats gently across the Dreaming River. On the far bank, she sees the shimmering outline of Mirror Mountain.",
+        image: NaN,
+        options: [
+            { text: "Go to mirror mountain", next: "H" },
+        ],
+        animation: NaN,
+        random: false
     },
     G: {
-    text: "Nova leaps across shimmering stones. Each step glows brighter as she remembers who she is. With a final leap, she lands safely—stronger, braver.",
-    image: NaN,
-    options: [
-        { text: "Go to mirror mountain", next: "H" },
-    ],
-    animation: NaN,
-    random: false
+        text: "Nova leaps across shimmering stones. Each step glows brighter as she remembers who she is. With a final leap, she lands safely—stronger, braver.",
+        image: NaN,
+        options: [
+            { text: "Go to mirror mountain", next: "H" },
+        ],
+        animation: NaN,
+        random: false
     },
     H: {
-    text: "Nova reaches Mirror Mountain, tall and glimmering like starlight on water. She climbs, and the mountain reflects her memories: when she was afraid, when she helped others, when she kept going. At the top, the sky asks a question: “Do you believe you are still a star?” Nova's answer?",
-    image: "images/Mirror Mountain.png",
-    options: [
-        { text: "Yes—I always was", next: "I" },
-        { text: "I'm not sure… I still feel small", next: "J" },
-    ],
-    animation: { filePath:"animations/mirrormountain.html", length:"10000" },
-    random: true
+        text: "Nova reaches Mirror Mountain, tall and glimmering like starlight on water. She climbs, and the mountain reflects her memories: when she was afraid, when she helped others, when she kept going. At the top, the sky asks a question: “Do you believe you are still a star?” Nova's answer?",
+        image: "images/Mirror Mountain.png",
+        options: [
+            { text: "Yes—I always was", next: "I" },
+            { text: "I'm not sure… I still feel small", next: "J" },
+        ],
+        animation: { filePath:"animations/mirrormountain.html", length:"10000" },
+        random: true
     },
     I: {
-    text: "Nova stands tall. “Yes. I shine, even in the dark.” She closes her eyes and makes her wish. ✨ The sky opens and lifts her back among the stars. ",
-    image: "images/winning cup.png",
-    options: [
-        { text: "Go to homepage", next: "homepage" }
-    ],
-    animation: NaN,
-    random: false
+        text: "Nova stands tall. “Yes. I shine, even in the dark.” She closes her eyes and makes her wish. ✨ The sky opens and lifts her back among the stars. ",
+        image: "images/winning cup.png",
+        options: [
+            { text: "Go to homepage", next: "homepage" }
+        ],
+        animation: NaN,
+        random: false
     },
     J: {
-    text: "Nova whispers, “Maybe I'm not strong enough…” But the mountain glows. The owl's voice returns: “Even small stars carry great light.” Nova's heart warms. She believes—and makes her wish. ✨ She rises.",
-    image: "images/winning cup.png",
-    options: [
-        { text: "Go to homepage", next: "homepage" }
-    ],
-    animation: NaN,
-    random: false
+        text: "Nova whispers, “Maybe I'm not strong enough…” But the mountain glows. The owl's voice returns: “Even small stars carry great light.” Nova's heart warms. She believes—and makes her wish. ✨ She rises.",
+        image: "images/winning cup.png",
+        options: [
+            { text: "Go to homepage", next: "homepage" }
+        ],
+        animation: NaN,
+        random: false
     },
     homepage: {
         animation: { filePath:"animations/gotohome.html", length:"1000" }
@@ -202,7 +197,7 @@ async function optionHideFun(callback) {
 }
 
 // function to load an animation
-function loadAnimation(animationFile, animationLen ,callback) {
+function loadAnimation(animationFile, animationLen, callback) {
     // fetch(get) the animation html file
     fetch(animationFile)
         // the response of the fetch    
@@ -252,9 +247,9 @@ function loadAnimation(animationFile, animationLen ,callback) {
         });
 }
 
-
 // this function is the main function that loads the story / plays it
 function showStoryPart(storyPart) {
+    // not done yet \/
     // setting the html within the storyContainer element to the story decision
     // if (storyPart.backgroundImage) {
     //     storyBackground.style.backgroundImage = url(storyPart.backgroundImage)
@@ -281,12 +276,20 @@ function showStoryPart(storyPart) {
         // get document elements
         const randomButton = document.getElementById("randomButton");
         const randomText = document.getElementById("randomText");
-        // if they exist
+
+        // track the last selected index
+        let lastIndex = -1;
+
         if (randomButton && randomText) {
-            // add randomButton click listen
             randomButton.addEventListener("click", () => {
-                // js get random item from array stuff below why so complex
-                const randomIndex = Math.floor(Math.random() * storyPart.options.length);
+                let randomIndex;
+
+                // keep picking randomIndex until it is different... more special than the lastIndex
+                do {
+                    randomIndex = Math.floor(Math.random() * storyPart.options.length);
+                } while (randomIndex === lastIndex && storyPart.options.length > 1);
+
+                lastIndex = randomIndex;  // update last index
                 const randomOption = storyPart.options[randomIndex];
                 randomText.textContent = "Try going: " + randomOption.text;
             });
@@ -309,6 +312,7 @@ function loadStoryPart(part) {
         // if their is an animation
         // () => showStoryPart(storyPart) is a callback that is provided to the loadAnimation 
         // function so that after the animation is loaded the story will show
+        // used callback in optionHideFun because i cannot be bothered with async
         optionHideFun(() => loadAnimation(storyPart.animation.filePath, storyPart.animation.length, () => showStoryPart(storyPart)));
     } else {
         // else just show story decision / text
@@ -364,16 +368,30 @@ function testCORS(url) {
             console.error('CORS or network error:', error);
             corsProb = true
             // show the warning
-            showWarning();
+            showCorsWarning();
         });
 }
 
-function showWarning() {
-    const warning = document.getElementById('cors-warning');
-    warning.style.display = 'block';
+// function to show cors warning
+function showCorsWarning() {
+    const corsWarning = document.getElementById('cors-warning');
+    corsWarning.style.display = 'block';
     setTimeout(() => {
-        warning.style.display = 'none';
-    }, 4000); // Hide after 8 seconds
+        corsWarning.style.display = 'none';
+    }, 8000); // Hide after 8 seconds
+}
+
+// function to show audio warning
+function showAudioWarning() {
+    const audioWarning = document.getElementById('audio-warning');
+    audioWarning.style.display = 'block';
+    // click to hide
+    audioWarning.addEventListener('click', () => {
+        audioWarning.style.display = 'none';
+    });
+    setTimeout(() => {
+        audioWarning.style.display = 'none';
+    }, 4000); // Hide after 4 seconds
 }
 
 // on document load run
@@ -381,13 +399,15 @@ window.addEventListener('DOMContentLoaded', () => {
     // add stars
     addStars();
     // get and add startButton listener
-    testCORS('animations/mirrormountain.html');
+    testCORS('animations/corsTest.html');
+    // show audio warning
+    showAudioWarning()
     const startButton = document.getElementById('startButton');
     startButton.addEventListener('click', async () => {
         // fade to white completely then remove start page html and unfade and start animation
         const startDialog = document.getElementById('startDialog');
         await runAnimation(fader, 'animation-o-l', 1);
-        startDialog.innerHTML = ""; // clear Start Dialog
+        startDialog.innerHTML = ""; // clear Start Dialog 
         loadStoryPart('start');
         await runAnimation(fader, 'animation-l-o', 0.6);
     });
