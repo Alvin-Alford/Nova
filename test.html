@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nova's Echo Animation</title>
+<style>
+    .scene {
+        background-image: url("images/tree-owl.png");
+        background-color: #cccccc;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        position: absolute;
+    }
+
+    .firefly {
+        position: absolute;
+        background: #ffffaa;
+        border-radius: 50%;
+        box-shadow: 0 0 8px 3px #fffdbb, 0 0 20px 8px #ffff66aa;
+        animation: flicker 2s infinite alternate ease-in-out;
+        filter: drop-shadow(0 0 5px #fffdbb);
+    }
+    @keyframes flicker {
+        0% { opacity: 0.7; transform: scale(1); }
+        100% { opacity: 1; transform: scale(1.3); }
+    }
+</style>
+</head>
+<body>
+    <div class="scene">
+        <div class="text-box">
+        Nova's echo reaches a wise old owl perched in a twisted silver tree. The owl hoots softly. <br />
+        <em>“Follow the glow of the fireflies to the Dreaming River,”</em> he says. <br />
+        <em>“Then seek Mirror Mountain to return to the sky.”</em>
+        </div>
+
+        <!-- Fireflies placed around the tree, animated with flicker and slight movement -->
+        <div class="firefly" style="width:10px; height:10px; top: 40px; left: 30px; animation-delay: 0s;"></div>
+        <div class="firefly" style="width:8px; height:8px; top: 80px; left: 90px; animation-delay: 0.4s;"></div>
+        <div class="firefly" style="width:9px; height:9px; top: 120px; left: 50px; animation-delay: 0.8s;"></div>
+        <div class="firefly" style="width:7px; height:7px; top: 160px; left: 130px; animation-delay: 1.2s;"></div>
+        <div class="firefly" style="width:10px; height:10px; top: 210px; left: 80px; animation-delay: 1.6s;"></div>
+    </div>
+</body>
+</html>
